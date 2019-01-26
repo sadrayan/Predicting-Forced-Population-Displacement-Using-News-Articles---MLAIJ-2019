@@ -1,0 +1,148 @@
+%%%%%%%%%%%%%%%%%%%%%%% file typeinst.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is the LaTeX source for the instructions to authors using
+% the LaTeX document class 'llncs.cls' for contributions to
+% the Lecture Notes in Computer Sciences series.
+% http://www.springer.com/lncs       Springer Heidelberg 2006/05/04
+%
+% It may be used as a template for your own input - copy it
+% to a new file with a new name and use it as the basis
+% for your article.
+%
+% NB: the document class 'llncs' has its own and detailed documentation, see
+% ftp://ftp.springer.de/data/pubftp/pub/tex/latex/llncs/latex2e/llncsdoc.pdf
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt,letterpaper]{llncs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\setcounter{tocdepth}{3}
+\usepackage{graphicx}
+\usepackage{marvosym}
+\usepackage{url}
+\usepackage{fancyhdr}
+\usepackage[nocompress]{cite}
+
+\usepackage{adjustbox}
+\usepackage{paralist}
+\usepackage{booktabs} % For formal tables
+\usepackage{float}
+\usepackage{tabularx} % in the preamble
+% \usepackage{float}
+\usepackage{placeins}
+\usepackage{capt-of}
+
+\usepackage{geometry}
+\geometry{letterpaper, left=4cm, right=3.75cm, top=4cm, bottom=4cm, }
+
+\newcommand{\keywords}[1]{\par\addvspace\baselineskip
+\noindent\keywordname\enspace\ignorespaces#1}
+
+
+
+\pagestyle{fancy}
+\fancyhf{} % sets both header and footer to nothing
+\renewcommand{\headrulewidth}{0.0pt}
+
+
+
+%sets title page header,footer, page number
+\fancypagestyle{firstpage}{\fancyhf{}\renewcommand{\headrulewidth}{0.0pt}
+% \setcounter{page}{33}
+\fancyhead[C]{\small{Machine Learning and Applications: An International Journal (MLAIJ) Vol.5, No.12 2019}}
+\fancyfoot[L]{DOI: 10.5121/MLAIJ.2019.9403}
+\rfoot{\thepage}
+}
+
+%sets page numberon all page
+\rfoot{\thepage}
+%sets header on all page
+\chead{\small{Machine Learning and Applications: An International Journal (MLAIJ) Vol.5, No.12 2019}}
+
+
+\begin{document}
+
+%\mainmatter  % start of an individual contribution
+
+% first the title is needed
+\title{\LARGE{Predicting Forced Population Displacement Using News Articles}}
+
+% a short form should be given in case it is too long for the running head
+%\titlerunning{Lecture Notes in Computer Science: Authors' Instructions}
+
+% the name(s) of the author(s) follow(s) next
+%
+% NB: Chinese authors should write their first names(s) in front of
+% their surnames. This ensures that the names appear correctly in
+% the running heads and the author index.
+%
+\author{\large{Sadra Abrishamkar \and Forouq Khonsari \and Jimmy Huang \and Susan McGrath \and Aijun An}}
+\institute{\large{Department of Electrical Engineering and Computer Science \\ York University, Toronto, Canada}}
+
+
+%\author{Alfred Hofmann%
+%\thanks{Please note that the LNCS Editorial assumes that all authors have used
+%the western naming convention, with given names preceding surnames. This determines
+%the structure of the names in the running heads and the author index.}%
+%\and Ursula Barth\and Ingrid Haas\and Frank Holzwarth\and\\
+%Anna Kramer\and Leonie Kunz\and Christine Rei\ss\and\\
+%Nicole Sator\and Erika Siebert-Cole\and Peter Stra\ss er}
+%
+%\authorrunning{Lecture Notes in Computer Science: Authors' Instructions}
+% (feature abused for this document to repeat the title also on left hand pages)
+
+% the affiliations are given next; don't give your e-mail address
+% unless you accept that it will be published
+%\institute{Springer-Verlag, Computer Science Editorial,\\
+%Tiergartenstr. 17, 69121 Heidelberg, Germany\\
+%\mailsa\\
+%\mailsb\\
+%\mailsc\\
+%\url{http://www.springer.com/lncs}}
+
+%
+% NB: a more complex sample for affiliations and the mapping to the
+% corresponding authors can be found in the file "llncs.dem"
+% (search for the string "\mainmatter" where a contribution starts).
+% "llncs.dem" accompanies the document class "llncs.cls".
+%
+
+%\toctitle{Lecture Notes in Computer Science}
+%\tocauthor{Authors' Instructions}
+
+\maketitle
+
+\thispagestyle{firstpage}
+
+
+\begin{abstract}
+The world has witnessed mass forced population displacement across the globe. Population displacement has various indications, with different social and policy consequences.  Mitigation of the humanitarian crisis requires tracking and predicting the population movements to allocate the necessary resources and inform the policymakers. The set of events that triggers population movements can be traced in the news articles. In this paper, we propose the Population Displacement-Signal Extraction Framework (PD-SEF) to explore a large news corpus and extract the signals of forced population displacement. PD-SEF measures and evaluates violence signals, which is a critical factor of forced displacement from it. Following signal extraction, we propose a displacement prediction model based on extracted violence scores. Experimental results indicate the effectiveness of our framework in extracting high quality violence scores and building accurate prediction models. 
+\keywords{Topic Modeling, Classification, Humanitarian Signal Extraction}
+\end{abstract}
+
+
+\input{body}
+
+\section*{Acknowledgments} This work was supported by Natural Sciences and Engineering Research Council (NSERC) of Canada and an NSERC CREATE award. We thank the York Research Chair (YRC) Program and anonymous reviewers for their insightful comments.
+ 
+
+% \begin{thebibliography}{4}
+% \end{thebibliography}
+
+\bibliographystyle{abbrv}
+\bibliography{ref}
+
+
+\vspace{2cm}
+
+\section*{Authors}
+\noindent {\bf Sadra Abrishamkar} PhD. candidate in computer science at York University \\
+
+\noindent {\bf Forouq Khonsari} Received Master's degree in computer science at York University \\
+
+\noindent {\bf Jimmy Huang} is now a Professor at the School of Information Technology and the founding director of York’s Information Retrieval \& Knowledge Management Research Lab at the York University. \\
+
+\noindent {\bf Susan McGrath} Resident Scholar, Centre for Refugee Studies at York University. Academic and research interests include: developing a global refugee research network, refugee resettlement, community development and transnational social work. \\
+
+\noindent {\bf Aijun An} received her PhD. in Computer Science from the University of Regina in 1997. She was a research assistant professor at the University of Waterloo before joining York University in July 2001.
+\end{document}
